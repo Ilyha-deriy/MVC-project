@@ -5,6 +5,16 @@
     text-decoration: none;
 }
 
+a:link, a:visited {
+    color: black;
+}
+
+a:hover {
+    transition: all .3s;
+    color: #0099ff;
+}
+
+/* CSS for the list.php */
 .main {
     margin: 30px 20px 30px 20px;
 }
@@ -33,4 +43,55 @@ p {
 h2 {
     font-size: 2rem;
     font-family: Arial;
+}
+
+/* CSS for register.php and login.php */
+
+.container {
+    box-sizing: border-box;
+    padding: 100px;
+    margin: 20px 400px 20px 400px;
+}
+
+.title {
+    padding: 10px 0px;
+    text-align: center;
+}
+label {
+    font-family: Georgia;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0px 20px 0px;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: Georgia;
+    font-size: 15px;
+}
+
+input:focus {
+    background-color: ghostwhite;
+    outline: none;
+}
+
+.btn {
+    font-size: 20px;
+    background-color: #e6e6e6;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #999999;
+    transition: all .3s;
+}
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
 }
