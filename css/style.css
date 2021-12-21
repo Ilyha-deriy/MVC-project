@@ -4,6 +4,9 @@
     list-style: none;
     text-decoration: none;
 }
+html, body {
+    height: 100%;
+}
 
 a:link, a:visited {
     color: black;
@@ -16,7 +19,13 @@ a:hover {
 
 /* CSS for the list.php */
 .main {
+    min-height: 100%;
+    margin-bottom: -142px;
     margin: 30px 20px 30px 20px;
+}
+.main:after {
+    content: "";
+    display: block;
 }
 
 .article {
@@ -100,4 +109,100 @@ input:focus {
 
 .image {
     width: 100%;
+}
+
+/* CSS for header.php */
+
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color:black;
+}
+
+.inner_header {
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo_container {
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo_container h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.logo_container h1 span{
+    font-weight: 800;
+}
+
+.navigation {
+    float: right;
+    height: 100%;
+}
+
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation a:last-child{
+    padding-right: 0;
+}
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+a:hover li {
+    transition: all .3s;
+    color: rgb(216, 214, 214);
+}
+
+/* CSS for footer.php */
+
+
+.footer, .main:after {
+    height: 142px;
+}
+
+.footer {
+    background: black;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+.inner_footer {
+    display: black;
+    margin: 0 auto;
+    width: 1100px;
+    height: 100%;
+}
+
+.logo_container_footer h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: 200;
 }
