@@ -95,3 +95,9 @@ input:focus {
     background-color: #f1f1f1;
     text-align: center;
 }
+
+/* CSS for profile.php */
+
+.image {
+    width: 100%;
+}
