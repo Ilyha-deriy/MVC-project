@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.main {
+    margin: 30px 20px 30px 20px;
+}
+
+.article {
+    padding: 20px 10px 20px 10px;
+}
+
+.date {
+    padding-left: 10px;
+    font-family: Helvetica;
+    font-size: 12px;
+}
+
+.post {
+    padding: 20px 10px 20px 10px;
+}
+
+p {
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    line-height: 20px;
+    font-family: Georgia;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: Arial;
+}
