@@ -1,35 +1,21 @@
+<?php
 
-<div class="article">
-        <h2><?php echo $data["title"] ?></h2>
+
+foreach ($data['posts'] as $post) {
+    $post_date= $post->post_date;
+    $change_date =date("d-m-Y", strtotime($post_date));
+    ?>
+    <div class="article">
+        <h2><?php echo $post->post_title ?></h2>
     </div>
         <div class="date">
-            <h3>Date - <?php echo $data["date"] ?></h3>
+            <h3>Date - <?php echo $change_date ?></h3>
         </div>
             <div class="post">
                 <p>
-                    <?php echo $data["post"] ?>
+                    <?php echo $post->post_body ?>
                 </p>
             </div>
 
-            <div class="article">
-        <h2><?php echo $data2["title"] ?></h2>
-    </div>
-        <div class="date">
-            <h3>Date - <?php echo $data2["date"] ?></h3>
-        </div>
-            <div class="post">
-                <p>
-                    <?php echo $data2["post"] ?>
-                </p>
-            </div>    
-            <div class="article">
-        <h2><?php echo $data3["title"] ?></h2>
-    </div>
-        <div class="date">
-            <h3>Date - <?php echo $data3["date"] ?></h3>
-        </div>
-            <div class="post">
-                <p>
-                    <?php echo $data3["post"] ?>
-                </p>
-            </div>                
+    <?php
+}
