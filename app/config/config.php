@@ -9,6 +9,6 @@ define('DB_NAME', 'mvc-project');
 //Shortcuts constants
 define('APPROOT', dirname(dirname(__FILE__)));
 
-define('URLROOT', 'localhost:8888/MVC-project');
+define('URLROOT', 'http://localhost:8888/MVC-project');
 
 define('SITENAME', 'MVC Project');

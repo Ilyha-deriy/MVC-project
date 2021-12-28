@@ -21,6 +21,11 @@
                     $this->currentMethod = $url[1];
                     unset($url[1]);
                 }
+            } else if (isset($url[0])) {
+                if (method_exists($this->controller, $url[0])) {
+                    $this->method = $url[0];
+                    unset($url[0]);
+                }
             }
 
             $this->params = $url ? array_values($url) : [];

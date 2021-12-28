@@ -2,12 +2,12 @@
 
     Class Pages extends Controller {
         public function __construct() {
-            $this->userModel = $this->model('User');
+            $this->postModel = $this->model('Post');
         }
 
         public function index() {
 
-            $posts= $this->userModel->getPosts();
+            $posts= $this->postModel->getPosts();
             $data= [
                 'posts'=> $posts
             ];
