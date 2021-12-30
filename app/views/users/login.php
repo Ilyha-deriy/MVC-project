@@ -1,6 +1,5 @@
 <?php require APPROOT . '/views/includes/header.php' ?>
 
-<?php var_dump($_SESSION); ?>
 <div class="container">   
     <div class="title">
         <h2>Login</h2>
