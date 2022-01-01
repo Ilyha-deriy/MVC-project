@@ -234,22 +234,24 @@ class Users extends Controller {
           }
 
 
-          if (!empty($_FILES['image']['name'])){
-              $image_name = time() . '_' . $_FILES['image']['name'];
-              $destination = PUBLICROOT . "/images/" . $image_name;
-
-              $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
-
-                 if($result) {
-                    $data['image'] = $image_name;
-                } else {
-                    echo "Failed To Upload Image";
-                }
-
-            }
+      
 
           // Make sure that errors are empty
           if (empty($data['usernameError']) && empty($data['emailError']) && empty($data['passwordError']) && empty($data['confirmPasswordError'])) {
+
+            if (!empty($_FILES['image']['name'])){
+                $image_name = time() . '_' . $_FILES['image']['name'];
+                $destination = PUBLICROOT . "/images/" . $image_name;
+  
+                $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
+  
+                   if($result) {
+                      $data['image'] = $image_name;
+                  } else {
+                      echo "Failed To Upload Image";
+                  }
+  
+              }
 
               // Hash password
               $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
